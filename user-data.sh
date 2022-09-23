@@ -4,8 +4,8 @@ user=$1
 
 if [ -z $user ]
 then
-	read -p "Indica el nombre:" $user
-	exit 1
+	read -p "Indica el nombre:" user
+	
 fi
 
 if id "$user" >/dev/null 2>&1;
