@@ -10,11 +10,11 @@ fi
 
 if id "$user" >/dev/null 2>&1;
 then	
-	user=$(grep $user /etc/passwd | cut -d ':' -f 1)
-	id1=$(grep $user /etc/passwd | cut -d ':' -f 3)
-	id2=$(grep $user /etc/passwd | cut -d ':' -f 4)
-	home=$(grep $user /etc/passwd | cut -d ':' -f 6)
-	shell=$(grep $user /etc/passwd | cut -d ':' -f 7)
+	user=$(grep -w  $user /etc/passwd | cut -d ':' -f 1)
+	id1=$(grep -w $user /etc/passwd | cut -d ':' -f 3)
+	id2=$(grep -w $user /etc/passwd | cut -d ':' -f 4)
+	home=$(grep -w $user /etc/passwd | cut -d ':' -f 6)
+	shell=$(grep -w $user /etc/passwd | cut -d ':' -f 7)
 	
 	echo "Nombre: $user"
 	echo "UID: $id1"
